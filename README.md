@@ -2,7 +2,9 @@
     <img src="https://raw.githubusercontent.com/joeyagreco/hacker-news/main/img/hacker_news.png" alt="hacker news logo" width="300"/>
 <h1>Hacker News SDK</h1>
 <h3>A Python Wrapper for the Hacker News API</h3>
+
 [Hacker News API Documentation](https://github.com/HackerNews/API/blob/master/README.md)
+
 
 <a target="_blank" href="https://www.python.org/downloads/" title="Python version"><img src="https://img.shields.io/badge/python-%3E=_3.10-teal.svg"></a>
 ![Last Commit](https://img.shields.io/github/last-commit/joeyagreco/hacker-news)
