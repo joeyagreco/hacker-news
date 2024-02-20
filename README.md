@@ -112,7 +112,7 @@ print(get_item_by_id(126809))
   "by" : "pg",
   "descendants" : 54,
   "id" : 126809,
-  "kids" : [ 126822, 126823, 126993, 126824, 126934, 127411, 126888, 127681, 126818, 126816, 126854, 127095, 126861, 127313, 127299, 126859, 126852, 126882, 126832, 127072, 127217, 126889, 127535, 126917, 126875 ],
+  "kids" : [ 126822, 126823, 126993, 126824, ..., 126875 ],
   "parts" : [ 126810, 126811, 126812 ],
   "score" : 46,
   "text" : "",
@@ -137,6 +137,105 @@ print(get_item_by_id(160705))
   "text" : "Yes, ban them; I'm tired of seeing Valleywag stories on News.YC.",
   "time" : 1207886576,
   "type" : "pollopt"
+}
+```
+
+### Get a User by Username
+
+```python
+from hn_sdk.client.v0.client import get_user_by_username
+
+print(get_item_by_id("joeyagreco"))
+```
+```sh
+{
+    "created": 1663896930,
+    "id": "joeyagreco",
+    "karma": 4,
+    "submitted": [38474886, 35729377, 35729231, 32946977, 32946976],
+}
+```
+
+### Get Current Largest Item ID
+```python
+from hn_sdk.client.v0.client import get_max_item_id
+
+print(get_max_item_id())
+```
+```sh
+39438426
+```
+
+### Get New Stories
+```python
+from hn_sdk.client.v0.client import get_new_stories
+
+print(get_new_stories())
+```
+```sh
+[ 39431573, 39431552, 39431514, 39431505, ..., 39432231 ]
+```
+
+### Get Top Stories
+```python
+from hn_sdk.client.v0.client import get_top_stories
+
+print(get_top_stories())
+```
+```sh
+[ 39396571, 39385098, 39387191, 39389092, ..., 39394528 ]
+```
+
+### Get Best Stories
+```python
+from hn_sdk.client.v0.client import get_best_stories
+
+print(get_best_stories())
+```
+```sh
+[ 39437424, 39418810, 39418102, 39422238, ..., 39402906 ]
+```
+
+### Get Ask HN Stories
+```python
+from hn_sdk.client.v0.client import get_ask_stories
+
+print(get_ask_stories())
+```
+```sh
+[ 39405805, 39405655, 39400290, 39398791,  ..., 39427773 ]
+```
+
+### Get Show HN Stories
+```python
+from hn_sdk.client.v0.client import get_show_stories
+
+print(get_show_stories())
+```
+```sh
+[ 39387382, 39403234, 39410058, 39391731,  ..., 39390544 ]
+```
+
+### Get Job Stories
+```python
+from hn_sdk.client.v0.client import get_job_stories
+
+print(get_job_stories())
+```
+```sh
+[ 39057748, 39040718, 39038845, 39019063,  ..., 39006337 ]
+```
+
+### Get Changed Items and Profiles
+```python
+from hn_sdk.client.v0.client import get_updates
+
+print(get_updates())
+```
+```sh
+{
+  "items" : [ 8423305, 8420805, 8423379, 8422504, ..., 8422087 ],
+  "profiles" : [ "thefox", "mdda", "plinkplonk", "GBond", ..., "Bogdanp" ]
 }
 ```
 
