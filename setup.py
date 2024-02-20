@@ -1,7 +1,7 @@
 import setuptools
 
 pkg_vars = dict()
-with open("hn-sdk/_version.py") as f:
+with open("hn_sdk/_version.py") as f:
     exec(f.read(), pkg_vars)
 
 package_version = pkg_vars["__version__"]
