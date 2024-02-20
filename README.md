@@ -1,5 +1,5 @@
 <div align="center">
-    <img src="https://raw.githubusercontent.com/joeyagreco/hacker-news/main/img/hacker-news.png" alt="hacker news logo" width="300"/>
+    <img src="https://raw.githubusercontent.com/joeyagreco/hacker-news/main/img/hacker_news.png" alt="hacker news logo" width="300"/>
 <h1>Hacker News SDK</h1>
 <h3>A Python Wrapper for the Hacker News API</h3>
 
