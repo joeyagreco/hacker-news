@@ -17,7 +17,7 @@ MAX_ITEM_PATH = "maxitem"
 UPDATES_PATH = "updates"
 
 
-def get_item(item_id: int) -> dict:
+def get_item(item_id: str) -> dict:
     """
     https://github.com/HackerNews/API?tab=readme-ov-file#items
     """
