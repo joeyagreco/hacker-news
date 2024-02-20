@@ -48,8 +48,8 @@ jobs:
           python -m pip install --upgrade pip
           make deps
 
-      - name: Build Package
-        run: make pkg-build
+      - name: Install local package
+        run: pip install -e .
 
       - name: Run e2e tests
         run: |
