@@ -10,5 +10,5 @@ All notable changes to this project will be documented in this file.
 
 ### Initial Release
 
-[Unreleased]: https://github.com/joeyagreco/leeger/compare/v1.0.0...HEAD
-[1.0.0]: https://github.com/joeyagreco/leeger/releases/tag/v1.0.0
+[Unreleased]: https://github.com/joeyagreco/hacker-news/compare/v1.0.0...HEAD
+[1.0.0]: https://github.com/joeyagreco/hacker-news/releases/tag/v1.0.0
