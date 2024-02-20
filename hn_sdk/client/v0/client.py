@@ -35,7 +35,7 @@ def get_user_by_username(username: str) -> dict:
     return response.json()
 
 
-def get_max_item() -> dict:
+def get_max_item_id() -> dict:
     """
     https://github.com/HackerNews/API?tab=readme-ov-file#live-data
     """
