@@ -18,6 +18,9 @@ UPDATES_PATH = "updates"
 
 
 def get_item(item_id: int) -> dict:
+    """
+    https://github.com/HackerNews/API?tab=readme-ov-file#items
+    """
     url = f"{BASE_URL}/{VERSION}/{ITME_PATH}/{item_id}.json"
     response = rest_call(requests.get, url)
     response.raise_for_status()
@@ -25,6 +28,9 @@ def get_item(item_id: int) -> dict:
 
 
 def get_user(username: str) -> dict:
+    """
+    https://github.com/HackerNews/API?tab=readme-ov-file#users
+    """
     url = f"{BASE_URL}/{VERSION}/{USER_PATH}/{username}.json"
     response = rest_call(requests.get, url)
     response.raise_for_status()
@@ -32,6 +38,9 @@ def get_user(username: str) -> dict:
 
 
 def get_max_item() -> dict:
+    """
+    https://github.com/HackerNews/API?tab=readme-ov-file#live-data
+    """
     url = f"{BASE_URL}/{VERSION}/{MAX_ITEM_PATH}.json"
     response = rest_call(requests.get, url)
     response.raise_for_status()
@@ -39,6 +48,9 @@ def get_max_item() -> dict:
 
 
 def get_top_stories() -> dict:
+    """
+    https://github.com/HackerNews/API?tab=readme-ov-file#live-data
+    """
     url = f"{BASE_URL}/{VERSION}/{TOP_STORIES_PATH}.json"
     response = rest_call(requests.get, url)
     response.raise_for_status()
@@ -46,6 +58,9 @@ def get_top_stories() -> dict:
 
 
 def get_new_stories() -> dict:
+    """
+    https://github.com/HackerNews/API?tab=readme-ov-file#live-data
+    """
     url = f"{BASE_URL}/{VERSION}/{NEW_STORIES_PATH}.json"
     response = rest_call(requests.get, url)
     response.raise_for_status()
@@ -53,6 +68,9 @@ def get_new_stories() -> dict:
 
 
 def get_best_stories() -> dict:
+    """
+    https://github.com/HackerNews/API?tab=readme-ov-file#live-data
+    """
     url = f"{BASE_URL}/{VERSION}/{BEST_STORIES_PATH}.json"
     response = rest_call(requests.get, url)
     response.raise_for_status()
@@ -60,6 +78,9 @@ def get_best_stories() -> dict:
 
 
 def get_ask_stories() -> dict:
+    """
+    https://github.com/HackerNews/API?tab=readme-ov-file#live-data
+    """
     url = f"{BASE_URL}/{VERSION}/{ASK_STORIES_PATH}.json"
     response = rest_call(requests.get, url)
     response.raise_for_status()
@@ -67,6 +88,9 @@ def get_ask_stories() -> dict:
 
 
 def get_show_stories() -> dict:
+    """
+    https://github.com/HackerNews/API?tab=readme-ov-file#live-data
+    """
     url = f"{BASE_URL}/{VERSION}/{SHOW_STORIES_PATH}.json"
     response = rest_call(requests.get, url)
     response.raise_for_status()
@@ -74,6 +98,9 @@ def get_show_stories() -> dict:
 
 
 def get_job_stories() -> dict:
+    """
+    https://github.com/HackerNews/API?tab=readme-ov-file#live-data
+    """
     url = f"{BASE_URL}/{VERSION}/{JOB_STORIES_PATH}.json"
     response = rest_call(requests.get, url)
     response.raise_for_status()
@@ -81,6 +108,9 @@ def get_job_stories() -> dict:
 
 
 def get_updates() -> dict:
+    """
+    https://github.com/HackerNews/API?tab=readme-ov-file#live-data
+    """
     url = f"{BASE_URL}/{VERSION}/{UPDATES_PATH}.json"
     response = rest_call(requests.get, url)
     response.raise_for_status()
