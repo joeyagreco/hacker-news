@@ -1,6 +1,9 @@
-.PHONY: deps
-deps:
+.PHONY: deps-dev
+deps-dev:
 	@python3.10 -m pip install -r requirements.dev.txt
+
+.PHONY: deps
+deps: deps-dev
 	@python3.10 -m pip install -r requirements.txt
 
 
