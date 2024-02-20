@@ -22,6 +22,15 @@ Use the package manager [pip](https://pip.pypa.io/en/stable/) to install.
 pip install hn-sdk
 ```
 
+### Get an Item by ID
+```python
+from hn_sdk.client.v0.client import get_item_by_id
+
+print(get_item_by_id(8863))
+```
+```sh
+```
+
 ## Development
 
 ### Install Dependencies
