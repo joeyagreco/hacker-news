@@ -31,7 +31,7 @@ jobs:
       - name: Get Current Required Python Version
         id: get-python-versions
         run: |
-          MINIMUM_VERSION=$(grep -oP '__version_minimum_python__ = "\K.*(?=")' discbase/_version.py)
+          MINIMUM_VERSION=$(grep -oP '__version_minimum_python__ = "\K.*(?=")' hn_sdk/_version.py)
           echo "CURRENT_VERSION=$MINIMUM_VERSION" >> $GITHUB_ENV
 
       - name: Set up Python
