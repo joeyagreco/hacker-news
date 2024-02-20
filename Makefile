@@ -27,11 +27,6 @@ test-unit:
 test-e2e:
 	@pytest test_e2e/
 
-.PHONY: test-all
-test-all:
-	@$(MAKE) test-unit
-	@$(MAKE) test-e2e
-
 .PHONY: pkg-build
 pkg-build:
 	@rm -rf build

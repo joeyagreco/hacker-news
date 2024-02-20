@@ -11,13 +11,27 @@
 ![Formatting Check](https://github.com/joeyagreco/hacker-news/actions/workflows/formatting-check.yml/badge.svg)
 </div>
 
-## Disclaimer
-Use this library responsibly and be sure to read [Discord's Terms of Service](https://discord.com/terms) before using.
-
 ## Quickstart
 
 Use the package manager [pip](https://pip.pypa.io/en/stable/) to install.
 
 ```bash
 pip install hn-sdk
+```
+
+## Development
+
+### Install Dependencies
+```sh
+make deps
+```
+
+### Run E2E Tests
+```sh
+make test-e2e
+```
+
+### Format Code
+```sh
+make fmt
 ```
