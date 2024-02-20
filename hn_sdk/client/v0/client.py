@@ -1,27 +1,27 @@
 import requests
 
 from hn_sdk.client.util import rest_call
+from hn_sdk.util.ConfigReader import ConfigReader
 
-# TODO: put these in config file
-BASE_URL = "https://hacker-news.firebaseio.com"
-VERSION = "v0"
-TOP_STORIES_PATH = "topstories"
-NEW_STORIES_PATH = "newstories"
-BEST_STORIES_PATH = "beststories"
-ASK_STORIES_PATH = "askstories"
-SHOW_STORIES_PATH = "showstories"
-JOB_STORIES_PATH = "jobstories"
-ITME_PATH = "item"
-USER_PATH = "user"
-MAX_ITEM_PATH = "maxitem"
-UPDATES_PATH = "updates"
+BASE_URL = ConfigReader.get("client", "HACKER_NEWS_API", "BASE_URL")
+VERSION = ConfigReader.get("client", "HACKER_NEWS_API", "VERSION")
+TOP_STORIES_PATH = ConfigReader.get("client", "HACKER_NEWS_API", "TOP_STORIES_PATH")
+NEW_STORIES_PATH = ConfigReader.get("client", "HACKER_NEWS_API", "NEW_STORIES_PATH")
+BEST_STORIES_PATH = ConfigReader.get("client", "HACKER_NEWS_API", "BEST_STORIES_PATH")
+ASK_STORIES_PATH = ConfigReader.get("client", "HACKER_NEWS_API", "ASK_STORIES_PATH")
+SHOW_STORIES_PATH = ConfigReader.get("client", "HACKER_NEWS_API", "SHOW_STORIES_PATH")
+JOB_STORIES_PATH = ConfigReader.get("client", "HACKER_NEWS_API", "JOB_STORIES_PATH")
+ITEM_PATH = ConfigReader.get("client", "HACKER_NEWS_API", "ITEM_PATH")
+USER_PATH = ConfigReader.get("client", "HACKER_NEWS_API", "USER_PATH")
+MAX_ITEM_PATH = ConfigReader.get("client", "HACKER_NEWS_API", "MAX_ITEM_PATH")
+UPDATES_PATH = ConfigReader.get("client", "HACKER_NEWS_API", "UPDATES_PATH")
 
 
 def get_item_by_id(item_id: str) -> dict:
     """
     https://github.com/HackerNews/API?tab=readme-ov-file#items
     """
-    url = f"{BASE_URL}/{VERSION}/{ITME_PATH}/{item_id}.json"
+    url = f"{BASE_URL}/{VERSION}/{ITEM_PATH}/{item_id}.json"
     response = rest_call(requests.get, url)
     return response.json()
 

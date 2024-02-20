@@ -16,7 +16,7 @@ from hn_sdk.client.v0.client import (
 
 
 class TestClient(unittest.TestCase):
-    __DELAY_BETWEEN_TESTS = 0.5
+    __DELAY_BETWEEN_TESTS = 0.7
     __RESPONSE_REQUIRED_KEYS = ["id"]
     __TEST_STORY_ID = 8863
     __TEST_COMMENT_ID = 2921983
