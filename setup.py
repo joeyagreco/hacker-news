@@ -1,7 +1,7 @@
 import setuptools
 
 pkg_vars = dict()
-with open("hn-api/_version.py") as f:
+with open("hn-sdk/_version.py") as f:
     exec(f.read(), pkg_vars)
 
 package_version = pkg_vars["__version__"]
@@ -14,7 +14,7 @@ with open("README.md") as f:
     read_me = f.read()
 
 setuptools.setup(
-    name="hn-api",
+    name="hn-sdk",
     version=package_version,
     author="Joey Greco",
     author_email="joeyagreco@gmail.com",
