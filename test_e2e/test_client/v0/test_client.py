@@ -79,6 +79,32 @@ class TestClient(unittest.TestCase):
         self.assertIsInstance(resp, dict)
         self.assertTrue(self.__required_keys_in_response(resp))
 
+    def test_get_user_by_username_invalid_username_raises_exception(self):
+        # too short
+        with self.assertRaises(ValueError) as context:
+            get_user_by_username("a")
+        self.assertEqual("invalid username", str(context.exception))
+        # too long
+        with self.assertRaises(ValueError) as context:
+            get_user_by_username("a" * 16)
+        self.assertEqual("invalid username", str(context.exception))
+        # contains "/"
+        with self.assertRaises(ValueError) as context:
+            get_user_by_username("abc/")
+        self.assertEqual("invalid username", str(context.exception))
+        # contains "\"
+        with self.assertRaises(ValueError) as context:
+            get_user_by_username("abc\\")
+        self.assertEqual("invalid username", str(context.exception))
+        # contains "@"
+        with self.assertRaises(ValueError) as context:
+            get_user_by_username("abc@")
+        self.assertEqual("invalid username", str(context.exception))
+        # contains " "
+        with self.assertRaises(ValueError) as context:
+            get_user_by_username("abc ")
+        self.assertEqual("invalid username", str(context.exception))
+
     def test_get_max_item_id(self):
         resp = get_max_item_id()
         self.assertIsInstance(resp, int)

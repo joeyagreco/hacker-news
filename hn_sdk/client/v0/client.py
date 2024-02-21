@@ -17,6 +17,27 @@ MAX_ITEM_PATH = ConfigReader.get("client", "HACKER_NEWS_API", "MAX_ITEM_PATH")
 UPDATES_PATH = ConfigReader.get("client", "HACKER_NEWS_API", "UPDATES_PATH")
 
 
+def __is_valid_hacker_news_username(username: str) -> bool:
+    """
+    Validates if a given username is valid for Hacker News.
+    For validation, per https://news.ycombinator.com/login (when you try to create a new username):
+    'Usernames can only contain letters, digits, dashes and underscores, and should be between 2 and 15 characters long.'
+
+    Returns True if the username is potentially valid, False otherwise.
+    """
+    # Check the length of the username
+    if not (2 <= len(username) <= 15):
+        return False
+
+    # Check each character in the username
+    valid_chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-_"
+    for char in username:
+        if char not in valid_chars:
+            return False
+
+    return True
+
+
 def get_item_by_id(item_id: int) -> dict:
     """
     https://github.com/HackerNews/API?tab=readme-ov-file#items
@@ -32,6 +53,8 @@ def get_user_by_username(username: str) -> dict:
     """
     https://github.com/HackerNews/API?tab=readme-ov-file#users
     """
+    if not __is_valid_hacker_news_username(username):
+        raise ValueError("invalid username")
     url = f"{BASE_URL}/{VERSION}/{USER_PATH}/{username}.json"
     response = rest_call(requests.get, url)
     return response.json()
