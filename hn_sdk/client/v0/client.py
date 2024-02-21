@@ -23,7 +23,7 @@ def __is_valid_hacker_news_username(username: str) -> bool:
     For validation, per https://news.ycombinator.com/login (when you try to create a new username):
     'Usernames can only contain letters, digits, dashes and underscores, and should be between 2 and 15 characters long.'
 
-    Returns True if the username is potentially valid, False otherwise.
+    Returns True if the username is a valid Hacker News username, False otherwise.
     """
     # Check the length of the username
     if not (2 <= len(username) <= 15):
