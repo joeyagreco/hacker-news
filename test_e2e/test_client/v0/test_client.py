@@ -39,6 +39,11 @@ class TestClient(unittest.TestCase):
                 return False
         return True
 
+    def test_get_item_by_id_item_id_not_int_raises_exception(self):
+        with self.assertRaises(Exception) as context:
+            get_item_by_id("foo")
+        self.assertEqual("item id must be an integer", str(context.exception))
+
     def test_get_item_by_id_story(self):
         resp = get_item_by_id(self.__TEST_STORY_ID)
         self.assertIsInstance(resp, dict)
