@@ -22,7 +22,7 @@ def get_item_by_id(item_id: int) -> dict:
     https://github.com/HackerNews/API?tab=readme-ov-file#items
     """
     if not isinstance(item_id, int):
-        raise Exception("item id must be an integer")
+        raise ValueError("item id must be an integer")
     url = f"{BASE_URL}/{VERSION}/{ITEM_PATH}/{item_id}.json"
     response = rest_call(requests.get, url)
     return response.json()

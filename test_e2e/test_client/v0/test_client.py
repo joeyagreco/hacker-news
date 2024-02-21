@@ -16,7 +16,7 @@ from hn_sdk.client.v0.client import (
 
 
 class TestClient(unittest.TestCase):
-    __DELAY_BETWEEN_TESTS = 0.7
+    __DELAY_BETWEEN_TESTS = 0.5
     __RESPONSE_REQUIRED_KEYS = ["id"]
     __TEST_STORY_ID = 8863
     __TEST_COMMENT_ID = 2921983
@@ -40,7 +40,7 @@ class TestClient(unittest.TestCase):
         return True
 
     def test_get_item_by_id_item_id_not_int_raises_exception(self):
-        with self.assertRaises(Exception) as context:
+        with self.assertRaises(ValueError) as context:
             get_item_by_id("foo")
         self.assertEqual("item id must be an integer", str(context.exception))
 
