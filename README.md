@@ -155,7 +155,7 @@ print(get_item_by_id("joeyagreco"))
     "submitted": [38474886, 35729377, 35729231, 32946977, 32946976],
 }
 ```
-
+---
 ### Get Current Largest Item ID
 ```python
 from hn_sdk.client.v0.client import get_max_item_id
@@ -165,7 +165,7 @@ print(get_max_item_id())
 ```sh
 39438426
 ```
-
+---
 ### Get New Stories
 ```python
 from hn_sdk.client.v0.client import get_new_stories
@@ -175,7 +175,7 @@ print(get_new_stories())
 ```sh
 [ 39431573, 39431552, 39431514, 39431505, ..., 39432231 ]
 ```
-
+---
 ### Get Top Stories
 ```python
 from hn_sdk.client.v0.client import get_top_stories
@@ -185,7 +185,7 @@ print(get_top_stories())
 ```sh
 [ 39396571, 39385098, 39387191, 39389092, ..., 39394528 ]
 ```
-
+---
 ### Get Best Stories
 ```python
 from hn_sdk.client.v0.client import get_best_stories
@@ -195,7 +195,7 @@ print(get_best_stories())
 ```sh
 [ 39437424, 39418810, 39418102, 39422238, ..., 39402906 ]
 ```
-
+---
 ### Get Ask HN Stories
 ```python
 from hn_sdk.client.v0.client import get_ask_stories
@@ -205,7 +205,7 @@ print(get_ask_stories())
 ```sh
 [ 39405805, 39405655, 39400290, 39398791,  ..., 39427773 ]
 ```
-
+---
 ### Get Show HN Stories
 ```python
 from hn_sdk.client.v0.client import get_show_stories
@@ -215,7 +215,7 @@ print(get_show_stories())
 ```sh
 [ 39387382, 39403234, 39410058, 39391731,  ..., 39390544 ]
 ```
-
+---
 ### Get Job Stories
 ```python
 from hn_sdk.client.v0.client import get_job_stories
@@ -225,7 +225,7 @@ print(get_job_stories())
 ```sh
 [ 39057748, 39040718, 39038845, 39019063,  ..., 39006337 ]
 ```
-
+---
 ### Get Changed Items and Profiles
 ```python
 from hn_sdk.client.v0.client import get_updates
