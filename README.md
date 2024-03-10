@@ -139,7 +139,7 @@ print(get_item_by_id(160705))
   "type" : "pollopt"
 }
 ```
-
+---
 ### Get a User by Username
 
 ```python
