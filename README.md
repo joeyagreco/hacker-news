@@ -145,7 +145,7 @@ print(get_item_by_id(160705))
 ```python
 from hn_sdk.client.v0.client import get_user_by_username
 
-print(get_item_by_id("joeyagreco"))
+print(get_user_by_username("joeyagreco"))
 ```
 ```sh
 {
