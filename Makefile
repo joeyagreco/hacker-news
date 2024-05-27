@@ -1,10 +1,12 @@
+PY_CMD=python3.10
+
 .PHONY: deps-dev
 deps-dev:
-	@python3.10 -m pip install -r requirements.dev.txt
+	@$(PY_CMD) -m pip install -r requirements.dev.txt
 
 .PHONY: deps
 deps: deps-dev
-	@python3.10 -m pip install -r requirements.txt
+	@$(PY_CMD) -m pip install -r requirements.txt
 
 
 .PHONY: fmt
@@ -31,13 +33,13 @@ test-e2e:
 pkg-build:
 	@rm -rf build
 	@rm -rf dist
-	@python3 setup.py sdist bdist_wheel
+	$(PY_CMD) setup.py sdist bdist_wheel
 
 .PHONY: pkg-test
 pkg-test:
-	@python3 -m twine upload --repository testpypi dist/*
+	@$(PY_CMD) -m twine upload --repository testpypi dist/*
 
 
 .PHONY: pkg-prod
 pkg-prod:
-	@python3 -m twine upload dist/*
+	@$(PY_CMD) -m twine upload dist/*
